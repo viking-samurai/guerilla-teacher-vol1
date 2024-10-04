@@ -132,7 +132,7 @@ window.onscroll = () => {
 };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
 	previousButton.style.display = "flex";
 	myButton.style.display = "flex";
 	forwardButton.style.display = "flex";
@@ -156,6 +156,10 @@ myButton.onclick = () => {
 
 //Goback a panel and scroll to top button
 previousButton.onclick = () => {
+	window.scroll({
+		top: 0,
+		behavior: "smooth",
+	});
 	//Determine location
 	for(i=0; i<panels.length; i++) {
 		if(!panels[i].classList.contains('inactive')) {
@@ -185,17 +189,16 @@ previousButton.onclick = () => {
 		document.getElementById('contents-icon').classList.remove('active');
 		document.getElementById('home-icon').classList.add('active');
 	}
-
-	window.scroll({
-		top: 0,
-		behavior: "smooth",
-	});
 };
 
 
 
 //Go forward a panel and scroll top top button
 forwardButton.onclick = () => {
+	window.scroll({
+		top: 0,
+		behavior: "smooth",
+	});
 	//Determine location
 	for(i=0; i<panels.length; i++) {
 		if(!panels[i].classList.contains('inactive')) {
@@ -219,9 +222,4 @@ forwardButton.onclick = () => {
 		document.getElementById('contents-icon').classList.remove('active');
 		document.getElementById('contact-icon').classList.add('active');
 	}
-
-	window.scroll({
-		top: 0,
-		behavior: "smooth",
-	});
 };
