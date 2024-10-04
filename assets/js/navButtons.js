@@ -67,6 +67,9 @@ function advancePanel(e) {
 
 //Function describng homepage forward button and moving the hash with the button
 function landingPageHashChange(e) {
+	window.scroll({
+		top: 0, behavior: "smooth",
+	});
 	for(i=0; i<panels.length; i++) {
 		if(!panels[i].classList.contains('inactive')) {
 			var thisPanel = panels[i].id;
