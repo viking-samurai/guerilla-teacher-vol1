@@ -1071,26 +1071,45 @@
 							<header>
 								<h2>Contact Me</h2>
 							</header>
-							<form action="#" method="post">
-								<div>
-									<div class="row">
-										<div class="col-6 col-12-medium">
-											<input type="text" name="name" placeholder="Name" />
-										</div>
-										<div class="col-6 col-12-medium">
-											<input type="text" name="email" placeholder="Email" />
-										</div>
-										<div class="col-12">
-											<input type="text" name="subject" placeholder="Subject" />
-										</div>
-										<div class="col-12">
-											<textarea name="message" placeholder="Message" rows="6"></textarea>
-										</div>
-										<div class="col-12">
-											<input type="submit" value="Send Message" />
-										</div>
-									</div>
-								</div>
+							<form class="contact-form" id="contact-form" 
+								onsubmit="return submitUserForm()" action="contactForm.php" method="post" autocomplete="off">
+								
+								<!-- form-item -->
+								<div class="form-item">
+									<input class="form-control" name="name" id="name" type="text" name="input" placeholder="name" required/>
+								</div><!-- End / form-item -->
+								
+								
+								<!-- form-item -->
+								<div class="form-item">
+									<input class="form-control" name="email" id="email" type="text" name="input" placeholder="email" required/>
+								</div><!-- End / form-item -->
+								
+								
+								<!-- form-item -->
+								<div class="form-item">
+									<input class="form-control" name="number" id="number" type="text" name="input" placeholder="phone"/>
+								</div><!-- End / form-item -->
+								
+								
+								<!-- form-item -->
+								<div class="form-item">
+									<input class="form-control" name="subject" subject="subject" type="text" name="input" placeholder="subject"/>
+								</div><!-- End / form-item -->
+								
+								
+								<!-- form-item -->
+								<div class="form-item">
+									<textarea name="message" id="message" placeholder="Message" style="height: 150px;"></textarea>
+								</div><!-- End / form-item -->
+								
+								<div class="form-item">
+									<div id="recaptcha-div" class="g-recaptcha" data-sitekey="6Lcb000qAAAAABN3FmgnefAYiKbQbNYuEQTqYet9" 
+										data-callback="captchaVerified"></div>
+									<div class="recaptcha-error" id="recaptcha-error">^ This field required.</div>
+								</div><!-- End / form-item -->
+								
+								<button class="btn btn-primary btn-round mb-30" type="submit">Send message</button>
 							</form>
 						</article>
 
