@@ -225,7 +225,7 @@ forwardButton.onclick = () => {
 	document.getElementById(nextPanel).classList.toggle('inactive');
 	//Set the navArrow
 	if(nextPanel === "table-of-contents" || nextPanel === "foreword" || nextPanel === "work1" || 
-		nextPanel === "work2" || nextPanel === "refrain" || nextPanel === "conclusion" || nextPanel === "contact") {
+		nextPanel === "work2" || nextPanel === "refrain" || nextPanel === "conclusion") {
 			document.getElementById('home-icon').classList.remove('active');
 			document.getElementById('contents-icon').classList.add('active');
 	} else {
