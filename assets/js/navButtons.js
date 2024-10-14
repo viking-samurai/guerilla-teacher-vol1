@@ -142,7 +142,7 @@ window.onscroll = () => {
 };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+  if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
 	previousButton.style.display = "flex";
 	myButton.style.display = "flex";
 	forwardButton.style.display = "flex";
