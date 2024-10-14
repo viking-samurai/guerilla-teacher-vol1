@@ -224,8 +224,8 @@ forwardButton.onclick = () => {
 	document.getElementById(nextPanel).style.display = "block";
 	document.getElementById(nextPanel).classList.toggle('inactive');
 	//Set the navArrow
-	if(nextPanel === "table-of-contents" || nextPanel === "foreword" || 
-		nextPanel === "work1" || nextPanel === "work2" || nextPanel === "refrain" || nextPanel === "conclusion") {
+	if(nextPanel === "table-of-contents" || nextPanel === "foreword" || nextPanel === "work1" || 
+		nextPanel === "work2" || nextPanel === "refrain" || nextPanel === "conclusion" || nextPanel === "contact") {
 			document.getElementById('home-icon').classList.remove('active');
 			document.getElementById('contents-icon').classList.add('active');
 	} else {
