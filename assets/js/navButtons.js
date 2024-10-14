@@ -95,7 +95,8 @@ const contentLinks = document.querySelectorAll('.content-link');
 
 function openPanel(e) {
 	window.scroll({
-		top: 0, behavior: "smooth",
+		top: 0,
+		behavior: "smooth",
 	});
 	if(this.id === "foreword-link") {
 		document.getElementById("table-of-contents").style.display = "none";
