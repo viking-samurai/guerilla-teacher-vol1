@@ -53,7 +53,7 @@ function advancePanel(e) {
 	panels.forEach(panel => panel.classList.add('inactive'));
 	if(nextPanel === "contact") {
 		document.getElementById(thisPanel).style.display = "none";
-		document.getElementById(nextPanel).style.display = "flex";
+		document.getElementById(nextPanel).style.display = "block";
 		document.getElementById(nextPanel).classList.toggle('inactive');
 	} else {
 		document.getElementById(thisPanel).style.display = "none";
@@ -220,15 +220,9 @@ forwardButton.onclick = () => {
 	}
 	//Pull the switch
 	panels.forEach(panel => panel.classList.add('inactive'));
-	if(nextPanel === "contact") {
-		document.getElementById(thisPanel).style.display = "none";
-		document.getElementById(nextPanel).style.display = "block";
-		document.getElementById(nextPanel).classList.toggle('inactive');
-	} else {
-		document.getElementById(thisPanel).style.display = "none";
-		document.getElementById(nextPanel).style.display = "block";
-		document.getElementById(nextPanel).classList.toggle('inactive');
-	}
+	document.getElementById(thisPanel).style.display = "none";
+	document.getElementById(nextPanel).style.display = "block";
+	document.getElementById(nextPanel).classList.toggle('inactive');
 	//Set the navArrow
 	if(nextPanel === "table-of-contents" || nextPanel === "foreword" || 
 		nextPanel === "work1" || nextPanel === "work2" || nextPanel === "refrain" || nextPanel === "conclusion") {
